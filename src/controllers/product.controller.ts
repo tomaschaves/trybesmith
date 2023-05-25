@@ -5,7 +5,7 @@ const create = async (req: Request, res: Response) => {
   const product = await ProductService.createProduct(req.body);
 
   res.status(201).json(product);
-}
+};
 
 export default {
   create,
