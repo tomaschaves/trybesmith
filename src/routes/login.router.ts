@@ -1,10 +1,8 @@
-// export const express = require('express');
-// const loginController = require('../controllers/category.controller');
-// const { checkToken, checkCategoryNameLength } = require('../middlewares/validations');
+import { Router } from 'express';
+import loginController from '../controllers/login.controller';
 
-// const loginRouter = express.Router();
-// loginRouter.post('/', checkToken, checkCategoryNameLength, categoryController.postCategory);
-// loginRouter.get('/', checkToken, categoryController.getAllCategories);
-// userRouter.get('/:id', checkToken, userController.getUser);
+const loginRouter = Router();
 
-// module.exports = loginRouter;
+loginRouter.post('/login', loginController.login);
+
+export default loginRouter;
